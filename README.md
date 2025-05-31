@@ -41,7 +41,7 @@ This is a simple RESTful Todo List API built using **Node.js**, **Express**, and
 1. Clone the repository
 2. Run `npm install`
 3. Create a `.env` file and add your MongoDB URI and JWT secret
-4. Start the server with `npm start`
+4. Start the server with `npm run dev`
 5. Use Postman to test endpoints
 
 ## Project Source
