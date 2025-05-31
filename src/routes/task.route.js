@@ -6,19 +6,19 @@ import { Router } from "express";
 const router = Router()
 
 // get all tasks
-router.get('/todo', authToken, getAllTask)
+router.get('/todos', authToken, getAllTask)
 
 // get by id
-router.get('/todo/:id', authToken, authorizeTodoOwner, getTaskById)
+router.get('/todos/:id', authToken, authorizeTodoOwner, getTaskById)
 
 // create
-router.post('/todo', authToken, createTask)
+router.post('/todos', authToken, createTask)
 
 // update
-router.patch('/todo/:id', authToken, authorizeTodoOwner, updateTask)
+router.patch('/todos/:id', authToken, authorizeTodoOwner, updateTask)
 
 // delete
-router.delete('/todo/:id', authToken, authorizeTodoOwner, deleteTask)
+router.delete('/todos/:id', authToken, authorizeTodoOwner, deleteTask)
 
 
 export default router;
