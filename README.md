@@ -33,7 +33,7 @@ This is a simple RESTful Todo List API built using **Node.js**, **Express**, and
 
 - `GET /todos` — Get all todos (supports pagination with `?page=` and `limit=`)
 - `POST /todos` — Create a new todo
-- `PUT /todos/:id` — Update a todo
+- `PATCH /todos/:id` — Update a todo
 - `DELETE /todos/:id` — Delete a todo
 
 ## Usage
