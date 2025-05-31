@@ -3,6 +3,7 @@ import express from 'express';
 import connectDB from './src/config/db.js';
 import { PORT } from './src/config/config.js';
 import authRoutes from './src/routes/auth.route.js';
+import taskRoutes from './src/routes/task.route.js';
 
 const app = express();
 
@@ -10,6 +11,8 @@ const app = express();
 app.use(express.json())
 // endpoints
 app.use('/api/auth', authRoutes)
+app.use('/api', taskRoutes)
+
 
 
 
