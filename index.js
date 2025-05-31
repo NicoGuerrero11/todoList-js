@@ -1,9 +1,16 @@
 
 import express from 'express';
 import connectDB from './src/config/db.js';
-import { PORT } from './src/config/config.js'
+import { PORT } from './src/config/config.js';
+import authRoutes from './src/routes/auth.route.js';
 
 const app = express();
+
+//middleware
+app.use(express.json())
+// endpoints
+app.use('/api/auth', authRoutes)
+
 
 
 const starServer = async () => {

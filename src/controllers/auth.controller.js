@@ -11,12 +11,13 @@ export const registerUser = async (req, res) => {
     try {
         // Validator
         const user = await User.findOne({ email });
-        if (!user) return res.status(401).json({ message: "User alredy exists" });
+        if (user) return res.status(401).json({ message: "Email already in use" });
 
         // hash password
         const hashPassword = await bcrypt.hash(password, 10);
         const newUser = new User({
             username,
+            email,
             password: hashPassword
         });
 
@@ -42,7 +43,7 @@ export const loginUser = async (req, res) => {
     try {
 
         // Username validation
-        const user = await User.findOne(email);
+        const user = await User.findOne({ email });
         if (!user) return res.status(401).json({ message: "email not found" });
 
         //Password validation
@@ -62,7 +63,6 @@ export const loginUser = async (req, res) => {
 
         // Response
         res.status(200).json({
-            message: "Login successful",
             token
 
         })
