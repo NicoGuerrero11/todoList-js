@@ -8,7 +8,7 @@ const authToken = (req, res, next) => {
     if (!token) return res.status(401).json({ message: "Unauthorized" });
 
     jwt.verify(token, JWT_SECRET, (err, user) => {
-        if (err) return res.status(403).json({ message: "Unauthorized" });
+        if (err) return res.status(401).json({ message: "Unauthorized" });
         req.user = user;
         next()
     });
