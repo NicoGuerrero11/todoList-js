@@ -26,15 +26,15 @@ This is a simple RESTful Todo List API built using **Node.js**, **Express**, and
 
 ### Authentication
 
-- `POST /auth/register` — Register a new user
-- `POST /auth/login` — Login and receive a JWT token
+- `POST api/auth/register` — Register a new user
+- `POST api/auth/login` — Login and receive a JWT token
 
 ### Todos (Requires Auth)
 
-- `GET /todos` — Get all todos (supports pagination with `?page=` and `limit=`)
-- `POST /todos` — Create a new todo
-- `PATCH /todos/:id` — Update a todo
-- `DELETE /todos/:id` — Delete a todo
+- `GET api/todos` — Get all todos (supports pagination with `?page=` and `limit=`)
+- `POST api/todos` — Create a new todo
+- `PATCH api/todos/:id` — Update a todo
+- `DELETE api/todos/:id` — Delete a todo
 
 ## Usage
 
